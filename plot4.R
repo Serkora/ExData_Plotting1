@@ -8,7 +8,7 @@ data<-ordata[ordata$Date %in% c("1/2/2007","2/2/2007"),]
 
 ## Graph 4
 
-#open the png graphics devices
+#open the png graphics device
 #required width/height is default, so no need to specify it
 png(file="plot4.png",bg="transparent")
 
