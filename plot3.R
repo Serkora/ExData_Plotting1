@@ -7,7 +7,7 @@ data<-ordata[ordata$Date %in% c("1/2/2007","2/2/2007"),]
 
 ## Graph 3
 
-#open the png graphics device
+#open the png graphics devices
 #required width/height is default, so no need to specify it
 png(file="plot3.png",bg="transparent")
 
@@ -39,7 +39,7 @@ lines(as.numeric(data[,col3]),type="l",col="blue",xaxt="n")
 
 #as in the second plot, add x-axis ticks
 ll<-as.numeric(length(data[,"Global_active_power"]))
-axis(1, at = seq(0, ll+1, by = ll/2),labels=c("Thu","Fri","Sat"))
+axis(1, at = c(0, ll/2, ll+1),labels=c("Thu","Fri","Sat"))
 
 #add legend
 lgnd<-c(col1,col2,col3)
