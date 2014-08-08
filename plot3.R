@@ -11,9 +11,9 @@ data<-ordata[ordata$Date %in% c("1/2/2007","2/2/2007"),]
 #required width/height is default, so no need to specify it
 png(file="plot3.png",bg="transparent")
 
-# just additional automatisation things, not really needed for the assigment
-# although plot() and lines() functions do use the column names from this part
-# so if the code is run, be sure not to omit this part
+        # just additional automatisation things, not really needed for the assigment
+        # although plot() and lines() functions do use the column names from this part
+        # so if the code is run, be sure not to omit this part
 #find the column with the max value to use as the first graph,
 #as it won't be resized after the second one is plotted
 ind<-c(max(as.numeric(data[,"Sub_metering_1"])),max(as.numeric(data[,"Sub_metering_2"])),max(as.numeric(data[,"Sub_metering_3"])))
@@ -28,7 +28,7 @@ for (i in 1:length(ind)) {
     assign(colnam,paste("Sub_metering_",i,sep=""))
     z=z+1
 }
-#end of optional code
+            #end of optional code
 
 #plot the first graph
 plot(as.numeric(data[,col1]),type="l",col="black",
