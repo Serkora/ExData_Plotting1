@@ -21,7 +21,7 @@ plot(as.numeric(data[,"Global_active_power"]),type="l",xlab="",
 #find last point of the data (next one would correspond to the start of saturday)
 #create x-axis ticks at 0, middle and (length+1) points of graph
 ll<-as.numeric(length(data[,"Global_active_power"]))
-axis(1, at = c(0, ll/2, ll+1),labels=c("Thu","Fri","Sat"))
+axis(1, at = c(0, ll/2+1, ll+1),labels=c("Thu","Fri","Sat"))
 
 #close the device and save
 dev.off()
